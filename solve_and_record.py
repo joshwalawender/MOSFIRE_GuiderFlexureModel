@@ -45,16 +45,21 @@ args = p.parse_args()
 ## solve_pointing
 ##-------------------------------------------------------------------------
 def solve_pointing(filename, relax=False):
-    
+    hdr = fits.getheader(filename)
+    if not relax:
+        assert hdr.get('PONAME').strip() == 'REF'
+        assert float(hdr.get('RAOFF')) < 0.1
+        assert float(hdr.get('DECOFF')) < 0.1
+        assert hdr.get('OBJECT').strip() == 'GuiderFlexureTest'
 
     # Solve image for astrometry
-    output = subprocess.run(['solve-field', '-O', '-p', f"{f}"],
+    output = subprocess.run(['solve-field', '-p', '-z', '2', f"{f}"],
                             stdout=subprocess.PIPE)
     solved_file = f.with_name(f.name.replace('.fits', '.solved'))
     new_file = f.with_name(f.name.replace('.fits', '.new'))
     if not solved_file.exists():
-        print('Astrometry solve failed')
-        raise FileNotFoundError
+        print(f'Astrometry solve failed for {filename.name}')
+        return
 
     # Open Solved Image
     hdul = fits.open(new_file)
@@ -64,6 +69,7 @@ def solve_pointing(filename, relax=False):
     SKYPA2 = float(hdul[0].header.get('SKYPA2')) * u.deg
     ROTPPOSN = float(hdul[0].header.get('ROTPPOSN')) * u.deg
     FILTER = hdul[0].header.get('FILTER')
+    OBJECT = hdul[0].header.get('OBJECT')
 
     # Extract Guider Pointing Info from Header
     PONAME = hdul[0].header.get('PONAME') # This should be REF
@@ -80,10 +86,6 @@ def solve_pointing(filename, relax=False):
     DECOFF = float(hdul[0].header.get('DECOFF')) * u.arcsec
     RA = float(hdul[0].header.get('RA')) * u.deg
     DEC = float(hdul[0].header.get('DEC')) * u.deg
-    if not relax:
-        assert PONAME.strip() == 'REF'
-        assert RAOFF < 0.1 * u.arcsec
-        assert DECOFF < 0.1 * u.arcsec
 
     guider_coord = c.SkyCoord(RA, DEC, frame='icrs')
 
@@ -96,36 +98,37 @@ def solve_pointing(filename, relax=False):
     offset_pa = center_coord.position_angle(guider_coord).to(u.deg)
     offset_distance = center_coord.separation(guider_coord).to(u.arcsec)
     physical_offset_angle = offset_pa.to(u.deg) - SKYPA2
+    physical_offset_angle.wrap_at(180*u.deg, inplace=True)
 
-    print(f"{f.name:18s}: {offset_distance:.1f} at PA = {offset_pa:.2f}, SKYPA2={SKYPA2:.2f} (difference={physical_offset_angle:.2f})")
+    print(f"{f.name:18s}: {offset_distance:.1f} at PA = {offset_pa:.2f}, "\
+          f"SKYPA2={SKYPA2:.2f} (difference={physical_offset_angle:.2f})")
 
     table_file = Path('~/KeckData/MOSFIRE_GuiderFlexure/ImageResults.txt').expanduser()
     if not table_file.exists():
         t = QTable()
         t['Filename'] = [f.name]
-        t['EL'] = [EL.value] * EL.unit
-        t['PA'] = [SKYPA2.value] * SKYPA2.unit
-        t['RotAng'] = [ROTPPOSN.value] * ROTPPOSN.unit
+        t['EL'] = [EL.value]
+        t['PA'] = [SKYPA2.value]
+        t['RotAng'] = [ROTPPOSN.value]
         t['GuiderCoord'] = [guider_coord.to_string(style='hmsdms', sep=':', precision=2)]
         t['ImageCoord'] = [center_coord.to_string(style='hmsdms', sep=':', precision=2)]
-        t['Offset Distance'] = [offset_distance.value] * offset_distance.unit
-        t['Offset Angle'] = [physical_offset_angle.value] * physical_offset_angle.unit
+        t['OffsetDistance'] = [offset_distance.value]
+        t['OffsetAngle'] = [physical_offset_angle.value]
         print(t)
     else:
-        t = QTable.read(table_file, format='ascii')
+        t = QTable.read(table_file, format='ascii.ecsv')
         row = {'Filename': f.name,
-               'EL': EL,
-               'PA': SKYPA2,
-               'RotAng': ROTPPOSN,
+               'EL': EL.value,
+               'PA': SKYPA2.value,
+               'RotAng': ROTPPOSN.value,
                'GuiderCoord': guider_coord.to_string(style='hmsdms', sep=':', precision=2),
                'ImageCoord': center_coord.to_string(style='hmsdms', sep=':', precision=2),
-               'Offset Distance': offset_distance,
-               'Offset Angle': physical_offset_angle,
+               'OffsetDistance': offset_distance.value,
+               'OffsetAngle': physical_offset_angle.value,
               }
-        print(row)
         t.add_row(vals=row)
-
     t.write(table_file, format='ascii.ecsv', overwrite=True)
+
 
 if __name__ == '__main__':
    
