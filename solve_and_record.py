@@ -55,11 +55,11 @@ LogFormat = logging.Formatter('%(asctime)s %(levelname)8s: %(message)s',
 LogConsoleHandler.setFormatter(LogFormat)
 log.addHandler(LogConsoleHandler)
 ## Set up file output
-# LogFileName = None
-# LogFileHandler = logging.FileHandler(LogFileName)
-# LogFileHandler.setLevel(logging.DEBUG)
-# LogFileHandler.setFormatter(LogFormat)
-# log.addHandler(LogFileHandler)
+LogFileName = Path('~/KeckData/MOSFIRE_GuiderFlexure/ImageResults.log').expanduser()
+LogFileHandler = logging.FileHandler(LogFileName)
+LogFileHandler.setLevel(logging.DEBUG)
+LogFileHandler.setFormatter(LogFormat)
+log.addHandler(LogFileHandler)
 
 ##-------------------------------------------------------------------------
 ## solve_pointing
@@ -69,13 +69,14 @@ def solve_pointing(filename, relax=False):
     log.info(f"Analyzing {filename.name}")
     hdr = fits.getheader(filename)
     if not relax:
-        assert hdr.get('PONAME').strip() == 'REF'
-        assert float(hdr.get('RAOFF')) < 0.1
-        assert float(hdr.get('DECOFF')) < 0.1
-        assert hdr.get('OBJECT').strip() == 'GuiderFlexureTest'
+        if not hdr.get('PONAME').strip() == 'REF': return None
+        if not float(hdr.get('RAOFF')) < 0.1: return None
+        if not float(hdr.get('DECOFF')) < 0.1: return None
+        if not hdr.get('OBJECT').strip() == 'GuiderFlexureTest': return None
 
     # Extract EL, SKYPA, ROTPPOSN, FILTER
     EL = float(hdr.get('EL')) * u.deg
+    SKYPA1 = float(hdr.get('SKYPA1')) * u.deg
     SKYPA2 = float(hdr.get('SKYPA2')) * u.deg
     ROTPPOSN = float(hdr.get('ROTPPOSN')) * u.deg
     FILTER = hdr.get('FILTER')
@@ -84,7 +85,7 @@ def solve_pointing(filename, relax=False):
 
     # Solve image for astrometry
 #     astrometry_cmd = ['solve-field', '-O', '-p', '-z', '2', '-t', '2', f"{f}"]
-    astrometry_cmd = ['solve-field', '-O', '-p', '-z', '2', '-T', f"{f}"]
+    astrometry_cmd = ['solve-field', '-p', '-z', '2', '-T', f"{f}"]
     log.info('  ' + ' '.join(astrometry_cmd[:-1]))
     output = subprocess.run(astrometry_cmd, stdout=subprocess.PIPE)
     solved_file = f.with_name(f.name.replace('.fits', '.solved'))
@@ -121,13 +122,13 @@ def solve_pointing(filename, relax=False):
 
     offset_pa = center_coord.position_angle(guider_coord).to(u.deg)
     offset_distance = center_coord.separation(guider_coord).to(u.arcsec)
-    physical_offset_angle = offset_pa.to(u.deg) - SKYPA2
-    physical_offset_angle.wrap_at(180*u.deg, inplace=True)
+    offset_angle = offset_pa.to(u.deg) - SKYPA2
+    offset_angle.wrap_at(180*u.deg, inplace=True)
 
     tock = dt.utcnow()
     analysis_time = (tock-tick).total_seconds()
     log.info(f"  Solved {analysis_time:.0f} s: {offset_distance:.1f}, "\
-             f"{physical_offset_angle:.2f} at drive = {ROTPPOSN:.2f}")
+             f"{offset_angle:.2f} at drive = {ROTPPOSN:.2f}")
 
     table_file = Path('~/KeckData/MOSFIRE_GuiderFlexure/ImageResults.txt').expanduser()
     if not table_file.exists():
@@ -139,7 +140,7 @@ def solve_pointing(filename, relax=False):
         t['GuiderCoord'] = [guider_coord.to_string(style='hmsdms', sep=':', precision=2)]
         t['ImageCoord'] = [center_coord.to_string(style='hmsdms', sep=':', precision=2)]
         t['OffsetDistance'] = [offset_distance.value]
-        t['OffsetAngle'] = [physical_offset_angle.value]
+        t['OffsetAngle'] = [offset_angle.value]
         print(t)
     else:
         t = QTable.read(table_file, format='ascii.ecsv')
@@ -150,7 +151,7 @@ def solve_pointing(filename, relax=False):
                'GuiderCoord': guider_coord.to_string(style='hmsdms', sep=':', precision=2),
                'ImageCoord': center_coord.to_string(style='hmsdms', sep=':', precision=2),
                'OffsetDistance': offset_distance.value,
-               'OffsetAngle': physical_offset_angle.value,
+               'OffsetAngle': offset_angle.value,
               }
         t.add_row(vals=row)
     t.write(table_file, format='ascii.ecsv', overwrite=True)
