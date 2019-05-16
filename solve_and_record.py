@@ -5,6 +5,8 @@ import sys
 import os
 import argparse
 import logging
+from datetime import datetime as dt
+from datetime import timedelta as tdelta
 
 from pathlib import Path
 import subprocess
@@ -40,11 +42,31 @@ p.add_argument('files', nargs='*',
                help="All files")
 args = p.parse_args()
 
+##-------------------------------------------------------------------------
+## Create logger object
+##-------------------------------------------------------------------------
+log = logging.getLogger('MyLogger')
+log.setLevel(logging.DEBUG)
+## Set up console output
+LogConsoleHandler = logging.StreamHandler()
+LogConsoleHandler.setLevel(logging.DEBUG)
+LogFormat = logging.Formatter('%(asctime)s %(levelname)8s: %(message)s',
+                              datefmt='%Y-%m-%d %H:%M:%S')
+LogConsoleHandler.setFormatter(LogFormat)
+log.addHandler(LogConsoleHandler)
+## Set up file output
+# LogFileName = None
+# LogFileHandler = logging.FileHandler(LogFileName)
+# LogFileHandler.setLevel(logging.DEBUG)
+# LogFileHandler.setFormatter(LogFormat)
+# log.addHandler(LogFileHandler)
 
 ##-------------------------------------------------------------------------
 ## solve_pointing
 ##-------------------------------------------------------------------------
 def solve_pointing(filename, relax=False):
+    tick = dt.utcnow()
+    log.info(f"Analyzing {filename.name}")
     hdr = fits.getheader(filename)
     if not relax:
         assert hdr.get('PONAME').strip() == 'REF'
@@ -52,24 +74,26 @@ def solve_pointing(filename, relax=False):
         assert float(hdr.get('DECOFF')) < 0.1
         assert hdr.get('OBJECT').strip() == 'GuiderFlexureTest'
 
+    # Extract EL, SKYPA, ROTPPOSN, FILTER
+    EL = float(hdr.get('EL')) * u.deg
+    SKYPA2 = float(hdr.get('SKYPA2')) * u.deg
+    ROTPPOSN = float(hdr.get('ROTPPOSN')) * u.deg
+    FILTER = hdr.get('FILTER')
+    OBJECT = hdr.get('OBJECT')
+    FCPA, FCEL = (hdr.get('FCPA_EL')).split(' ')
+
     # Solve image for astrometry
-    output = subprocess.run(['solve-field', '-p', '-z', '2', f"{f}"],
-                            stdout=subprocess.PIPE)
+#     astrometry_cmd = ['solve-field', '-O', '-p', '-z', '2', '-t', '2', f"{f}"]
+    astrometry_cmd = ['solve-field', '-O', '-p', '-z', '2', '-T', f"{f}"]
+    log.info('  ' + ' '.join(astrometry_cmd[:-1]))
+    output = subprocess.run(astrometry_cmd, stdout=subprocess.PIPE)
     solved_file = f.with_name(f.name.replace('.fits', '.solved'))
     new_file = f.with_name(f.name.replace('.fits', '.new'))
     if not solved_file.exists():
-        print(f'Astrometry solve failed for {filename.name}')
+        log.error(f'  Astrometry solve failed for {filename.name}')
         return
-
     # Open Solved Image
     hdul = fits.open(new_file)
-
-    # Extract EL, SKYPA, ROTPPOSN, FILTER
-    EL = float(hdul[0].header.get('EL')) * u.deg
-    SKYPA2 = float(hdul[0].header.get('SKYPA2')) * u.deg
-    ROTPPOSN = float(hdul[0].header.get('ROTPPOSN')) * u.deg
-    FILTER = hdul[0].header.get('FILTER')
-    OBJECT = hdul[0].header.get('OBJECT')
 
     # Extract Guider Pointing Info from Header
     PONAME = hdul[0].header.get('PONAME') # This should be REF
@@ -100,8 +124,10 @@ def solve_pointing(filename, relax=False):
     physical_offset_angle = offset_pa.to(u.deg) - SKYPA2
     physical_offset_angle.wrap_at(180*u.deg, inplace=True)
 
-    print(f"{f.name:18s}: {offset_distance:.1f} at PA = {offset_pa:.2f}, "\
-          f"SKYPA2={SKYPA2:.2f} (difference={physical_offset_angle:.2f})")
+    tock = dt.utcnow()
+    analysis_time = (tock-tick).total_seconds()
+    log.info(f"  Solved {analysis_time:.0f} s: {offset_distance:.1f}, "\
+             f"{physical_offset_angle:.2f} at drive = {ROTPPOSN:.2f}")
 
     table_file = Path('~/KeckData/MOSFIRE_GuiderFlexure/ImageResults.txt').expanduser()
     if not table_file.exists():
