@@ -14,7 +14,7 @@ import subprocess
 import numpy as np
 from astropy import units as u
 from astropy.io import fits
-from astropy import coordinates as c
+from astropy.coordinates import SkyCoord
 from astropy.wcs import WCS, FITSFixedWarning
 from astropy.table import QTable, Row
 
@@ -62,6 +62,16 @@ LogFileHandler.setFormatter(LogFormat)
 log.addHandler(LogFileHandler)
 
 ##-------------------------------------------------------------------------
+## Get Center Coord
+##-------------------------------------------------------------------------
+def get_center_coord(hdu):
+    w = WCS(hdu.header)
+    nx, ny = hdu.data.shape
+    result = w.all_pix2world(np.array(nx/2), np.array(ny/2), 1)
+    center_coord = SkyCoord(result[0], result[1], frame='icrs', unit='deg')
+    return(center_coord)
+
+##-------------------------------------------------------------------------
 ## solve_pointing
 ##-------------------------------------------------------------------------
 def solve_pointing(filename, relax=False):
@@ -84,8 +94,8 @@ def solve_pointing(filename, relax=False):
     FCPA, FCEL = (hdr.get('FCPA_EL')).split(' ')
 
     # Solve image for astrometry
-#     astrometry_cmd = ['solve-field', '-O', '-p', '-z', '2', '-t', '2', f"{f}"]
-    astrometry_cmd = ['solve-field', '-p', '-z', '2', '-T', f"{f}"]
+    astrometry_cmd = ['solve-field', '-O', '-p', '-z', '2', '-t', '2', f"{f}"]
+#     astrometry_cmd = ['solve-field', '-O', '-p', '-z', '2', '-T', f"{f}"]
     log.info('  ' + ' '.join(astrometry_cmd[:-1]))
     output = subprocess.run(astrometry_cmd, stdout=subprocess.PIPE)
     solved_file = f.with_name(f.name.replace('.fits', '.solved'))
@@ -112,13 +122,15 @@ def solve_pointing(filename, relax=False):
     RA = float(hdul[0].header.get('RA')) * u.deg
     DEC = float(hdul[0].header.get('DEC')) * u.deg
 
-    guider_coord = c.SkyCoord(RA, DEC, frame='icrs')
+    guider_coord = SkyCoord(RA, DEC, frame='icrs')
 
     # Extract WCS from header
-    w = WCS(hdul[0].header)
-    nx, ny = hdul[0].data.shape
-    result = w.all_pix2world(np.array(nx/2), np.array(ny/2), 0)
-    center_coord = c.SkyCoord(result[0], result[1], frame='icrs', unit='deg')
+    center_coord = get_center_coord(hdul[0])
+    
+#     w = WCS(hdul[0].header)
+#     nx, ny = hdul[0].data.shape
+#     result = w.all_pix2world(np.array(nx/2), np.array(ny/2), 1)
+#     center_coord = SkyCoord(result[0], result[1], frame='icrs', unit='deg')
 
     offset_pa = center_coord.position_angle(guider_coord).to(u.deg)
     offset_distance = center_coord.separation(guider_coord).to(u.arcsec)
