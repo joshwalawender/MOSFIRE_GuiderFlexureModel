@@ -55,7 +55,7 @@ LogFormat = logging.Formatter('%(asctime)s %(levelname)8s: %(message)s',
 LogConsoleHandler.setFormatter(LogFormat)
 log.addHandler(LogConsoleHandler)
 ## Set up file output
-LogFileName = Path('~/KeckData/MOSFIRE_GuiderFlexure/ImageResults.log').expanduser()
+LogFileName = Path('ImageResults.log').expanduser()
 LogFileHandler = logging.FileHandler(LogFileName)
 LogFileHandler.setLevel(logging.DEBUG)
 LogFileHandler.setFormatter(LogFormat)
@@ -82,7 +82,7 @@ def solve_pointing(filename, relax=False):
         if not hdr.get('PONAME').strip() == 'REF': return None
         if not float(hdr.get('RAOFF')) < 0.1: return None
         if not float(hdr.get('DECOFF')) < 0.1: return None
-        if not hdr.get('OBJECT').strip() == 'GuiderFlexureTest': return None
+        if not hdr.get('OBJECT') in ['GuiderFlexureTest', 'MIRA PMFM 350', 'MIRA PMFM -350']: return None
 
     # Extract EL, SKYPA, ROTPPOSN, FILTER
     EL = float(hdr.get('EL')) * u.deg
@@ -142,7 +142,7 @@ def solve_pointing(filename, relax=False):
     log.info(f"  Solved {analysis_time:.0f} s: {offset_distance:.1f}, "\
              f"{offset_angle:.2f} at drive = {ROTPPOSN:.2f}")
 
-    table_file = Path('~/KeckData/MOSFIRE_GuiderFlexure/ImageResults.txt').expanduser()
+    table_file = Path('ImageResults.txt').expanduser()
     if not table_file.exists():
         t = QTable()
         t['Filename'] = [f.name]
