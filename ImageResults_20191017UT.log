@@ -1,0 +1,396 @@
+2019-10-17 01:46:06     INFO: Analyzing m191017_0010.fits
+2019-10-17 01:46:06     INFO: Analyzing m191017_0011.fits
+2019-10-17 01:46:06     INFO: Analyzing m191017_0012.fits
+2019-10-17 01:46:06     INFO: Analyzing m191017_0013.fits
+2019-10-17 01:46:06     INFO: Analyzing m191017_0014.fits
+2019-10-17 01:46:07     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 01:46:07    ERROR:   Astrometry solve failed for m191017_0014.fits
+2019-10-17 01:46:07     INFO: Analyzing m191017_0015.fits
+2019-10-17 01:46:07     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 01:46:07    ERROR:   Astrometry solve failed for m191017_0015.fits
+2019-10-17 01:46:07     INFO: Analyzing m191017_0016.fits
+2019-10-17 01:46:07     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 01:46:07    ERROR:   Astrometry solve failed for m191017_0016.fits
+2019-10-17 01:46:07     INFO: Analyzing m191017_0017.fits
+2019-10-17 01:46:07     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 01:46:07    ERROR:   Astrometry solve failed for m191017_0017.fits
+2019-10-17 01:46:07     INFO: Analyzing m191017_0018.fits
+2019-10-17 01:46:07     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 01:46:07    ERROR:   Astrometry solve failed for m191017_0018.fits
+2019-10-17 01:46:07     INFO: Analyzing m191017_0019.fits
+2019-10-17 01:46:07     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 01:46:07    ERROR:   Astrometry solve failed for m191017_0019.fits
+2019-10-17 02:04:35     INFO: Analyzing m191017_0014.fits
+2019-10-17 02:04:35     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:05:23     INFO:   Solved 49 s: 403.6 arcsec, 0.32 deg at drive = -360.00 deg
+2019-10-17 02:06:16     INFO: Analyzing m191017_0010.fits
+2019-10-17 02:06:16     INFO: Analyzing m191017_0011.fits
+2019-10-17 02:06:16     INFO: Analyzing m191017_0012.fits
+2019-10-17 02:06:16     INFO: Analyzing m191017_0013.fits
+2019-10-17 02:06:16     INFO: Analyzing m191017_0014.fits
+2019-10-17 02:06:16     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:06:31     INFO:   Solved 14 s: 403.6 arcsec, 0.32 deg at drive = -360.00 deg
+2019-10-17 02:06:31     INFO: Analyzing m191017_0015.fits
+2019-10-17 02:06:31     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:08:40     INFO:   Solved 129 s: 403.0 arcsec, 0.37 deg at drive = -315.12 deg
+2019-10-17 02:08:40     INFO: Analyzing m191017_0016.fits
+2019-10-17 02:08:40     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:09:06     INFO:   Solved 26 s: 404.1 arcsec, 0.38 deg at drive = -270.18 deg
+2019-10-17 02:09:06     INFO: Analyzing m191017_0017.fits
+2019-10-17 02:09:06     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:10:53     INFO:   Solved 107 s: 403.6 arcsec, 0.49 deg at drive = -225.18 deg
+2019-10-17 02:10:53     INFO: Analyzing m191017_0018.fits
+2019-10-17 02:10:53     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:11:12     INFO:   Solved 19 s: 403.7 arcsec, 0.37 deg at drive = -180.14 deg
+2019-10-17 02:11:13     INFO: Analyzing m191017_0019.fits
+2019-10-17 02:11:13     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:11:31     INFO:   Solved 18 s: 403.8 arcsec, 0.39 deg at drive = -135.10 deg
+2019-10-17 02:14:38     INFO: Analyzing m191017_0020.fits
+2019-10-17 02:14:38     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:14:57     INFO:   Solved 19 s: 403.7 arcsec, 0.28 deg at drive = -90.09 deg
+2019-10-17 02:14:57     INFO: Analyzing m191017_0021.fits
+2019-10-17 02:14:57     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:15:15     INFO:   Solved 18 s: 403.1 arcsec, 0.34 deg at drive = -45.13 deg
+2019-10-17 02:15:15     INFO: Analyzing m191017_0022.fits
+2019-10-17 02:15:15     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:15:32     INFO:   Solved 17 s: 403.5 arcsec, 0.32 deg at drive = -0.19 deg
+2019-10-17 02:15:32     INFO: Analyzing m191017_0023.fits
+2019-10-17 02:15:32     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:15:51     INFO:   Solved 18 s: 402.8 arcsec, 0.41 deg at drive = 44.27 deg
+2019-10-17 02:15:51     INFO: Analyzing m191017_0024.fits
+2019-10-17 02:15:51     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:16:06     INFO:   Solved 15 s: 403.8 arcsec, 0.38 deg at drive = -1.28 deg
+2019-10-17 02:16:06     INFO: Analyzing m191017_0025.fits
+2019-10-17 02:16:06     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:17:33     INFO:   Solved 87 s: 403.2 arcsec, 0.24 deg at drive = -46.81 deg
+2019-10-17 02:17:33     INFO: Analyzing m191017_0026.fits
+2019-10-17 02:17:33     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:17:53     INFO:   Solved 20 s: 403.7 arcsec, 0.20 deg at drive = -92.35 deg
+2019-10-17 02:17:53     INFO: Analyzing m191017_0027.fits
+2019-10-17 02:17:53     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:18:21     INFO:   Solved 27 s: 404.4 arcsec, 0.30 deg at drive = -137.90 deg
+2019-10-17 02:18:21     INFO: Analyzing m191017_0028.fits
+2019-10-17 02:18:21     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:20:01     INFO:   Solved 100 s: 404.0 arcsec, 0.36 deg at drive = -183.67 deg
+2019-10-17 02:20:01     INFO: Analyzing m191017_0029.fits
+2019-10-17 02:20:01     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:21:57     INFO:   Solved 116 s: 403.5 arcsec, 0.56 deg at drive = -229.53 deg
+2019-10-17 02:21:57     INFO: Analyzing m191017_0030.fits
+2019-10-17 02:21:57     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:22:21     INFO:   Solved 24 s: 403.2 arcsec, 0.53 deg at drive = -275.11 deg
+2019-10-17 02:22:21     INFO: Analyzing m191017_0031.fits
+2019-10-17 02:22:21     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:22:41     INFO:   Solved 20 s: 402.9 arcsec, 0.40 deg at drive = -320.64 deg
+2019-10-17 02:22:41     INFO: Analyzing m191017_0032.fits
+2019-10-17 02:22:41     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:22:58     INFO:   Solved 17 s: 403.7 arcsec, 0.36 deg at drive = -366.17 deg
+2019-10-17 02:22:58     INFO: Analyzing m191017_0033.fits
+2019-10-17 02:22:58     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:23:16     INFO:   Solved 18 s: 403.3 arcsec, 0.34 deg at drive = -360.37 deg
+2019-10-17 02:23:16     INFO: Analyzing m191017_0034.fits
+2019-10-17 02:23:16     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:23:33     INFO:   Solved 17 s: 403.1 arcsec, 0.37 deg at drive = -316.17 deg
+2019-10-17 02:23:33     INFO: Analyzing m191017_0035.fits
+2019-10-17 02:23:33     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:24:57     INFO:   Solved 84 s: 403.5 arcsec, 0.46 deg at drive = -271.92 deg
+2019-10-17 02:24:57     INFO: Analyzing m191017_0036.fits
+2019-10-17 02:24:57     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:25:14     INFO:   Solved 17 s: 403.9 arcsec, 0.40 deg at drive = -227.58 deg
+2019-10-17 02:25:14     INFO: Analyzing m191017_0037.fits
+2019-10-17 02:25:14     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:25:33     INFO:   Solved 19 s: 405.4 arcsec, 0.22 deg at drive = -183.22 deg
+2019-10-17 02:25:33     INFO: Analyzing m191017_0038.fits
+2019-10-17 02:25:33     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:26:43     INFO:   Solved 70 s: 404.2 arcsec, 0.36 deg at drive = -138.84 deg
+2019-10-17 02:26:43     INFO: Analyzing m191017_0039.fits
+2019-10-17 02:26:43     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:27:00     INFO:   Solved 17 s: 403.4 arcsec, 0.26 deg at drive = -94.74 deg
+2019-10-17 02:39:04     INFO: Analyzing m191017_0040.fits
+2019-10-17 02:39:04     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:39:29     INFO:   Solved 26 s: 403.8 arcsec, 0.29 deg at drive = -50.51 deg
+2019-10-17 02:39:30     INFO: Analyzing m191017_0041.fits
+2019-10-17 02:39:30     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:40:52     INFO:   Solved 82 s: 403.2 arcsec, 0.32 deg at drive = -6.30 deg
+2019-10-17 02:40:52     INFO: Analyzing m191017_0042.fits
+2019-10-17 02:40:52     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:42:29     INFO:   Solved 98 s: 403.0 arcsec, 0.39 deg at drive = 37.91 deg
+2019-10-17 02:42:30     INFO: Analyzing m191017_0043.fits
+2019-10-17 02:42:30     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:42:48     INFO:   Solved 18 s: 403.2 arcsec, 0.38 deg at drive = 45.02 deg
+2019-10-17 02:42:48     INFO: Analyzing m191017_0044.fits
+2019-10-17 02:42:48     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:43:05     INFO:   Solved 17 s: 403.5 arcsec, 0.32 deg at drive = -1.02 deg
+2019-10-17 02:43:05     INFO: Analyzing m191017_0045.fits
+2019-10-17 02:43:06     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:44:35     INFO:   Solved 89 s: 403.5 arcsec, 0.36 deg at drive = -47.47 deg
+2019-10-17 02:44:35     INFO: Analyzing m191017_0046.fits
+2019-10-17 02:44:35     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:46:19     INFO:   Solved 104 s: 403.5 arcsec, 0.39 deg at drive = -94.15 deg
+2019-10-17 02:46:19     INFO: Analyzing m191017_0047.fits
+2019-10-17 02:46:19     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:46:39     INFO:   Solved 21 s: 403.7 arcsec, 0.32 deg at drive = -140.49 deg
+2019-10-17 02:46:39     INFO: Analyzing m191017_0048.fits
+2019-10-17 02:46:39     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:47:00     INFO:   Solved 20 s: 404.2 arcsec, 0.46 deg at drive = -187.38 deg
+2019-10-17 02:47:00     INFO: Analyzing m191017_0049.fits
+2019-10-17 02:47:00     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 02:47:17     INFO:   Solved 17 s: 403.9 arcsec, 0.36 deg at drive = -233.81 deg
+2019-10-17 03:12:31     INFO: Analyzing m191017_0050.fits
+2019-10-17 03:12:31     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:12:50     INFO:   Solved 19 s: 403.4 arcsec, 0.36 deg at drive = -280.63 deg
+2019-10-17 03:12:50     INFO: Analyzing m191017_0051.fits
+2019-10-17 03:12:50     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:13:09     INFO:   Solved 19 s: 403.1 arcsec, 0.35 deg at drive = -327.36 deg
+2019-10-17 03:13:09     INFO: Analyzing m191017_0052.fits
+2019-10-17 03:13:09     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:13:27     INFO:   Solved 18 s: 403.3 arcsec, 0.32 deg at drive = -374.02 deg
+2019-10-17 03:13:27     INFO: Analyzing m191017_0053.fits
+2019-10-17 03:13:27     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:15:04     INFO:   Solved 97 s: 404.6 arcsec, 0.39 deg at drive = -360.21 deg
+2019-10-17 03:15:04     INFO: Analyzing m191017_0054.fits
+2019-10-17 03:15:04     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:16:31     INFO:   Solved 87 s: 403.6 arcsec, 0.35 deg at drive = -317.41 deg
+2019-10-17 03:16:31     INFO: Analyzing m191017_0055.fits
+2019-10-17 03:16:31     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:16:49     INFO:   Solved 18 s: 403.3 arcsec, 0.33 deg at drive = -274.42 deg
+2019-10-17 03:16:49     INFO: Analyzing m191017_0056.fits
+2019-10-17 03:16:49     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:17:06     INFO:   Solved 17 s: 403.5 arcsec, 0.35 deg at drive = -231.26 deg
+2019-10-17 03:17:06     INFO: Analyzing m191017_0057.fits
+2019-10-17 03:17:06     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:17:24     INFO:   Solved 18 s: 402.7 arcsec, 0.39 deg at drive = -187.94 deg
+2019-10-17 03:17:24     INFO: Analyzing m191017_0058.fits
+2019-10-17 03:17:24     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:18:55     INFO:   Solved 91 s: 403.7 arcsec, 0.42 deg at drive = -144.71 deg
+2019-10-17 03:18:55     INFO: Analyzing m191017_0059.fits
+2019-10-17 03:18:56     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:19:17     INFO:   Solved 21 s: 403.6 arcsec, 0.43 deg at drive = -102.47 deg
+2019-10-17 03:24:57     INFO: Analyzing m191017_0060.fits
+2019-10-17 03:24:57     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:25:25     INFO:   Solved 27 s: 403.5 arcsec, 0.38 deg at drive = -60.58 deg
+2019-10-17 03:25:25     INFO: Analyzing m191017_0061.fits
+2019-10-17 03:25:25     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:27:08     INFO:   Solved 104 s: 403.2 arcsec, 0.30 deg at drive = -17.90 deg
+2019-10-17 03:27:08     INFO: Analyzing m191017_0062.fits
+2019-10-17 03:27:08     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:28:19     INFO:   Solved 70 s: 403.6 arcsec, 0.36 deg at drive = 24.74 deg
+2019-10-17 03:28:19     INFO: Analyzing m191017_0063.fits
+2019-10-17 03:28:19     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:28:34     INFO:   Solved 15 s: 403.0 arcsec, 0.37 deg at drive = 45.76 deg
+2019-10-17 03:28:34     INFO: Analyzing m191017_0064.fits
+2019-10-17 03:28:34     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:29:52     INFO:   Solved 78 s: 403.2 arcsec, 0.35 deg at drive = 0.04 deg
+2019-10-17 03:29:52     INFO: Analyzing m191017_0065.fits
+2019-10-17 03:29:52     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:30:09     INFO:   Solved 17 s: 403.2 arcsec, 0.33 deg at drive = -45.64 deg
+2019-10-17 03:30:09     INFO: Analyzing m191017_0066.fits
+2019-10-17 03:30:09     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:30:26     INFO:   Solved 17 s: 403.6 arcsec, 0.32 deg at drive = -91.43 deg
+2019-10-17 03:30:26     INFO: Analyzing m191017_0067.fits
+2019-10-17 03:30:26     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:30:42     INFO:   Solved 16 s: 403.8 arcsec, 0.35 deg at drive = -137.31 deg
+2019-10-17 03:30:42     INFO: Analyzing m191017_0068.fits
+2019-10-17 03:30:42     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:30:59     INFO:   Solved 17 s: 403.9 arcsec, 0.41 deg at drive = -183.28 deg
+2019-10-17 03:30:59     INFO: Analyzing m191017_0069.fits
+2019-10-17 03:30:59     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:32:19     INFO:   Solved 81 s: 403.8 arcsec, 0.44 deg at drive = -229.26 deg
+2019-10-17 03:45:38     INFO: Analyzing m191017_0070.fits
+2019-10-17 03:45:38     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:46:00     INFO:   Solved 23 s: 402.8 arcsec, 0.44 deg at drive = -275.17 deg
+2019-10-17 03:46:01     INFO: Analyzing m191017_0071.fits
+2019-10-17 03:46:01     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:46:17     INFO:   Solved 16 s: 403.1 arcsec, 0.36 deg at drive = -320.97 deg
+2019-10-17 03:46:17     INFO: Analyzing m191017_0072.fits
+2019-10-17 03:46:17     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:48:13     INFO:   Solved 116 s: 403.2 arcsec, 0.31 deg at drive = -366.73 deg
+2019-10-17 03:48:13     INFO: Analyzing m191017_0073.fits
+2019-10-17 03:48:13     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:48:31     INFO:   Solved 18 s: 402.9 arcsec, 0.33 deg at drive = -360.02 deg
+2019-10-17 03:48:31     INFO: Analyzing m191017_0074.fits
+2019-10-17 03:48:31     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:48:49     INFO:   Solved 17 s: 403.0 arcsec, 0.41 deg at drive = -315.54 deg
+2019-10-17 03:48:49     INFO: Analyzing m191017_0075.fits
+2019-10-17 03:48:49     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:49:08     INFO:   Solved 19 s: 403.6 arcsec, 0.50 deg at drive = -271.10 deg
+2019-10-17 03:49:08     INFO: Analyzing m191017_0076.fits
+2019-10-17 03:49:08     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:49:27     INFO:   Solved 19 s: 403.6 arcsec, 0.49 deg at drive = -226.67 deg
+2019-10-17 03:49:27     INFO: Analyzing m191017_0077.fits
+2019-10-17 03:49:27     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:51:26     INFO:   Solved 119 s: 404.2 arcsec, 0.38 deg at drive = -182.19 deg
+2019-10-17 03:51:26     INFO: Analyzing m191017_0078.fits
+2019-10-17 03:51:26     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:51:41     INFO:   Solved 16 s: 403.9 arcsec, 0.29 deg at drive = -137.71 deg
+2019-10-17 03:51:41     INFO: Analyzing m191017_0079.fits
+2019-10-17 03:51:42     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 03:52:00     INFO:   Solved 19 s: 403.5 arcsec, 0.27 deg at drive = -93.27 deg
+2019-10-17 04:06:47     INFO: Analyzing m191017_0080.fits
+2019-10-17 04:06:47     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:07:11     INFO:   Solved 24 s: 403.1 arcsec, 0.31 deg at drive = -48.89 deg
+2019-10-17 04:07:11     INFO: Analyzing m191017_0081.fits
+2019-10-17 04:07:11     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:07:26     INFO:   Solved 16 s: 403.1 arcsec, 0.33 deg at drive = -4.53 deg
+2019-10-17 04:07:26     INFO: Analyzing m191017_0082.fits
+2019-10-17 04:07:27     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:07:42     INFO:   Solved 16 s: 402.9 arcsec, 0.44 deg at drive = 39.80 deg
+2019-10-17 04:07:42     INFO: Analyzing m191017_0083.fits
+2019-10-17 04:07:42     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:07:59     INFO:   Solved 17 s: 402.9 arcsec, 0.40 deg at drive = 46.43 deg
+2019-10-17 04:07:59     INFO: Analyzing m191017_0084.fits
+2019-10-17 04:08:00     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:08:15     INFO:   Solved 16 s: 402.9 arcsec, 0.30 deg at drive = 0.94 deg
+2019-10-17 04:08:15     INFO: Analyzing m191017_0085.fits
+2019-10-17 04:08:15     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:08:35     INFO:   Solved 20 s: 402.8 arcsec, 0.24 deg at drive = -44.57 deg
+2019-10-17 04:08:35     INFO: Analyzing m191017_0086.fits
+2019-10-17 04:08:35     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:08:50     INFO:   Solved 15 s: 403.2 arcsec, 0.17 deg at drive = -90.09 deg
+2019-10-17 04:08:50     INFO: Analyzing m191017_0087.fits
+2019-10-17 04:08:50     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:10:40     INFO:   Solved 109 s: 404.3 arcsec, 0.24 deg at drive = -135.66 deg
+2019-10-17 04:10:40     INFO: Analyzing m191017_0088.fits
+2019-10-17 04:10:40     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:10:57     INFO:   Solved 17 s: 404.7 arcsec, 0.44 deg at drive = -181.26 deg
+2019-10-17 04:10:57     INFO: Analyzing m191017_0089.fits
+2019-10-17 04:10:57     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:12:05     INFO:   Solved 68 s: 404.0 arcsec, 0.56 deg at drive = -226.67 deg
+2019-10-17 04:28:23     INFO: Analyzing m191017_0090.fits
+2019-10-17 04:28:24     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:28:42     INFO:   Solved 18 s: 403.2 arcsec, 0.58 deg at drive = -272.08 deg
+2019-10-17 04:28:42     INFO: Analyzing m191017_0091.fits
+2019-10-17 04:28:42     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:29:03     INFO:   Solved 21 s: 402.7 arcsec, 0.43 deg at drive = -317.43 deg
+2019-10-17 04:29:03     INFO: Analyzing m191017_0092.fits
+2019-10-17 04:29:03     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:29:23     INFO:   Solved 20 s: 402.7 arcsec, 0.28 deg at drive = -362.76 deg
+2019-10-17 04:29:23     INFO: Analyzing m191017_0093.fits
+2019-10-17 04:29:23     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:29:40     INFO:   Solved 17 s: 403.3 arcsec, 0.34 deg at drive = -360.72 deg
+2019-10-17 04:29:40     INFO: Analyzing m191017_0094.fits
+2019-10-17 04:29:40     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:31:13     INFO:   Solved 93 s: 403.3 arcsec, 0.43 deg at drive = -316.09 deg
+2019-10-17 04:31:14     INFO: Analyzing m191017_0095.fits
+2019-10-17 04:31:14     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:31:30     INFO:   Solved 16 s: 403.5 arcsec, 0.50 deg at drive = -271.45 deg
+2019-10-17 04:31:30     INFO: Analyzing m191017_0096.fits
+2019-10-17 04:31:30     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:31:46     INFO:   Solved 16 s: 404.2 arcsec, 0.56 deg at drive = -227.50 deg
+2019-10-17 04:31:46     INFO: Analyzing m191017_0097.fits
+2019-10-17 04:31:46     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:32:01     INFO:   Solved 15 s: 404.7 arcsec, 0.41 deg at drive = -182.84 deg
+2019-10-17 04:32:01     INFO: Analyzing m191017_0098.fits
+2019-10-17 04:32:01     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:33:06     INFO:   Solved 65 s: 404.2 arcsec, 0.25 deg at drive = -138.16 deg
+2019-10-17 04:33:06     INFO: Analyzing m191017_0099.fits
+2019-10-17 04:33:06     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:33:24     INFO:   Solved 18 s: 403.5 arcsec, 0.15 deg at drive = -93.51 deg
+2019-10-17 04:44:45     INFO: Analyzing m191017_0100.fits
+2019-10-17 04:44:45     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:46:34     INFO:   Solved 108 s: 403.6 arcsec, 0.24 deg at drive = -48.88 deg
+2019-10-17 04:46:34     INFO: Analyzing m191017_0101.fits
+2019-10-17 04:46:34     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:46:53     INFO:   Solved 19 s: 403.0 arcsec, 0.29 deg at drive = -4.26 deg
+2019-10-17 04:46:53     INFO: Analyzing m191017_0102.fits
+2019-10-17 04:46:53     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:48:35     INFO:   Solved 102 s: 403.1 arcsec, 0.43 deg at drive = 40.35 deg
+2019-10-17 04:48:35     INFO: Analyzing m191017_0103.fits
+2019-10-17 04:48:35     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:50:00     INFO:   Solved 85 s: 403.5 arcsec, 0.36 deg at drive = 44.69 deg
+2019-10-17 04:50:00     INFO: Analyzing m191017_0104.fits
+2019-10-17 04:50:00     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:50:18     INFO:   Solved 17 s: 404.0 arcsec, 0.40 deg at drive = -1.15 deg
+2019-10-17 04:50:18     INFO: Analyzing m191017_0105.fits
+2019-10-17 04:50:18     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:52:30     INFO:   Solved 132 s: 403.6 arcsec, 0.39 deg at drive = -46.96 deg
+2019-10-17 04:52:30     INFO: Analyzing m191017_0106.fits
+2019-10-17 04:52:30     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:54:11     INFO:   Solved 100 s: 403.4 arcsec, 0.40 deg at drive = -92.89 deg
+2019-10-17 04:54:11     INFO: Analyzing m191017_0107.fits
+2019-10-17 04:54:11     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:55:57     INFO:   Solved 107 s: 403.4 arcsec, 0.36 deg at drive = -139.08 deg
+2019-10-17 04:55:57     INFO: Analyzing m191017_0108.fits
+2019-10-17 04:55:58     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:57:58     INFO:   Solved 121 s: 403.2 arcsec, 0.35 deg at drive = -185.39 deg
+2019-10-17 04:57:58     INFO: Analyzing m191017_0109.fits
+2019-10-17 04:57:58     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 04:59:53     INFO:   Solved 115 s: 403.2 arcsec, 0.35 deg at drive = -231.80 deg
+2019-10-17 05:08:18     INFO: Analyzing m191017_0110.fits
+2019-10-17 05:08:18     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:10:04     INFO:   Solved 106 s: 403.2 arcsec, 0.34 deg at drive = -277.95 deg
+2019-10-17 05:10:04     INFO: Analyzing m191017_0111.fits
+2019-10-17 05:10:04     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:11:49     INFO:   Solved 105 s: 403.4 arcsec, 0.34 deg at drive = -324.24 deg
+2019-10-17 05:11:49     INFO: Analyzing m191017_0112.fits
+2019-10-17 05:11:49     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:12:06     INFO:   Solved 16 s: 403.7 arcsec, 0.38 deg at drive = -370.09 deg
+2019-10-17 05:12:06     INFO: Analyzing m191017_0113.fits
+2019-10-17 05:12:06     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:14:11     INFO:   Solved 125 s: 403.4 arcsec, 0.39 deg at drive = -360.49 deg
+2019-10-17 05:14:11     INFO: Analyzing m191017_0114.fits
+2019-10-17 05:14:11     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:14:29     INFO:   Solved 18 s: 403.7 arcsec, 0.38 deg at drive = -318.12 deg
+2019-10-17 05:14:29     INFO: Analyzing m191017_0115.fits
+2019-10-17 05:14:29     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:16:04     INFO:   Solved 96 s: 403.4 arcsec, 0.41 deg at drive = -275.64 deg
+2019-10-17 05:16:04     INFO: Analyzing m191017_0116.fits
+2019-10-17 05:16:04     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:16:24     INFO:   Solved 20 s: 403.5 arcsec, 0.42 deg at drive = -232.62 deg
+2019-10-17 05:16:24     INFO: Analyzing m191017_0117.fits
+2019-10-17 05:16:24     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:17:52     INFO:   Solved 88 s: 404.1 arcsec, 0.39 deg at drive = -189.79 deg
+2019-10-17 05:17:52     INFO: Analyzing m191017_0118.fits
+2019-10-17 05:17:52     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:18:08     INFO:   Solved 16 s: 403.8 arcsec, 0.43 deg at drive = -146.56 deg
+2019-10-17 05:18:08     INFO: Analyzing m191017_0119.fits
+2019-10-17 05:18:08     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:19:33     INFO:   Solved 85 s: 403.5 arcsec, 0.43 deg at drive = -103.49 deg
+2019-10-17 05:20:25     INFO: Analyzing m191017_0120.fits
+2019-10-17 05:20:25     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:21:04     INFO:   Solved 39 s: 403.4 arcsec, 0.40 deg at drive = -61.17 deg
+2019-10-17 05:21:04     INFO: Analyzing m191017_0121.fits
+2019-10-17 05:21:04     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:22:47     INFO:   Solved 103 s: 403.3 arcsec, 0.41 deg at drive = -18.88 deg
+2019-10-17 05:22:47     INFO: Analyzing m191017_0122.fits
+2019-10-17 05:22:47     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:23:03     INFO:   Solved 16 s: 403.0 arcsec, 0.37 deg at drive = 23.23 deg
+2019-10-17 05:23:03     INFO: Analyzing m191017_0123.fits
+2019-10-17 05:23:03     INFO: Analyzing m191017_0124.fits
+2019-10-17 05:23:03     INFO: Analyzing m191017_0125.fits
+2019-10-17 05:23:03     INFO: Analyzing m191017_0126.fits
+2019-10-17 05:23:03     INFO: Analyzing m191017_0127.fits
+2019-10-17 05:23:03     INFO: Analyzing m191017_0128.fits
+2019-10-17 05:23:03     INFO: Analyzing m191017_0129.fits
+2019-10-17 05:34:11     INFO: Analyzing m191017_0127.fits
+2019-10-17 05:34:11     INFO: Analyzing m191017_0128.fits
+2019-10-17 05:34:11     INFO: Analyzing m191017_0129.fits
+2019-10-17 05:34:51     INFO: Analyzing m191017_0127.fits
+2019-10-17 05:34:51     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:37:03     INFO:   Solved 133 s: 403.2 arcsec, 0.39 deg at drive = 45.64 deg
+2019-10-17 05:37:03     INFO: Analyzing m191017_0128.fits
+2019-10-17 05:37:04     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:38:41     INFO:   Solved 98 s: 403.1 arcsec, 0.36 deg at drive = 0.28 deg
+2019-10-17 05:38:41     INFO: Analyzing m191017_0129.fits
+2019-10-17 05:38:42     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:40:16     INFO:   Solved 95 s: 403.4 arcsec, 0.31 deg at drive = -45.08 deg
+2019-10-17 05:41:19     INFO: Analyzing m191017_0130.fits
+2019-10-17 05:41:19     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:42:42     INFO:   Solved 83 s: 403.5 arcsec, 0.32 deg at drive = -90.51 deg
+2019-10-17 05:42:42     INFO: Analyzing m191017_0131.fits
+2019-10-17 05:42:42     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:44:11     INFO:   Solved 89 s: 403.6 arcsec, 0.33 deg at drive = -135.98 deg
+2019-10-17 05:44:11     INFO: Analyzing m191017_0132.fits
+2019-10-17 05:44:11     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:46:06     INFO:   Solved 115 s: 403.7 arcsec, 0.41 deg at drive = -181.57 deg
+2019-10-17 05:46:06     INFO: Analyzing m191017_0133.fits
+2019-10-17 05:46:06     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:48:11     INFO:   Solved 125 s: 403.9 arcsec, 0.44 deg at drive = -227.07 deg
+2019-10-17 05:48:11     INFO: Analyzing m191017_0134.fits
+2019-10-17 05:48:11     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:48:34     INFO:   Solved 23 s: 403.4 arcsec, 0.43 deg at drive = -272.55 deg
+2019-10-17 05:48:34     INFO: Analyzing m191017_0135.fits
+2019-10-17 05:48:34     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:50:37     INFO:   Solved 123 s: 403.2 arcsec, 0.37 deg at drive = -317.97 deg
+2019-10-17 05:50:38     INFO: Analyzing m191017_0136.fits
+2019-10-17 05:50:38     INFO:   solve-field -O -p -z 2 -t 2
+2019-10-17 05:50:55     INFO:   Solved 18 s: 403.3 arcsec, 0.34 deg at drive = -363.35 deg
